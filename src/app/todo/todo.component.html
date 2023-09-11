@@ -1,0 +1,38 @@
+
+<div class="main">
+<h1>Tod-do LIST</h1>
+<form (ngSubmit)="rempTask()">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Task</label>
+      <input type="text"  id="taskv" name="taskv" placeholder="Enter a Task !" [(ngModel)]="taskv">
+      
+    </div>
+   
+    <div class="form-check">
+      
+      
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+  </form>
+
+  <table class="table" >
+    <thead>
+      <tr >
+       <th>Task</th>
+       <th >Completed</th>
+       <th>Delete</th>
+       
+      </tr>
+      <tr *ngFor="let t of tasks ; index as i ">
+        <td>{{t}}</td>
+        <td><p>Incomplete</p></td>
+        <td><button (click)="onDelete(i)"  class="delete">DELETE</button></td>
+
+      </tr>
+    </thead>
+    
+  
+  </table>
+
+
+</div>
